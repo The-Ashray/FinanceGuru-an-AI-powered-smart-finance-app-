@@ -1,19 +1,11 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "randomuser.me",
-      },
-    ],
-  },
-
+  reactStrictMode: true,
+  swcMinify: true,
   experimental: {
-    serverActions: {
-      bodySizeLimit: "5mb",
-    },
+    enableTracing: true
   },
-};
+  // Add any other options you had before here
+}
 
-export default nextConfig;
+export default nextConfig
